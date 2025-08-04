@@ -9,6 +9,22 @@ body {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+#lightbox.active {
+  pointer-events: all;
+}
+
+#lightbox {
+  pointer-events: none;
+}
+
+
+
 header, footer {
   background-color: #000000;
   padding: 20px;
@@ -207,7 +223,7 @@ nav {
 
 #lightbox {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%; /* Shifted right */
   transform: translate(-50%, -50%);
   width: 75vw;   /* Smaller than 90vw */
@@ -237,7 +253,8 @@ nav {
   background-color: #000;
 }
 
-#lightbox-caption {
+
+ #lightbox-caption {
   position: absolute;
   top: var(--lightbox-caption-y, 0px);   /* Y-axis custom variable */
   left: var(--lightbox-caption-x, 0px);  /* X-axis custom variable */
@@ -252,7 +269,7 @@ nav {
   border: 2px solid #f5831876;
   border-radius: 0px;
   box-sizing: border-box;
-}
+} */
 
 #lightbox-caption::-webkit-scrollbar {
   width: 8px;
@@ -268,7 +285,7 @@ nav {
 
 #lightbox span#prev,
 #lightbox span#next {
-  color: white;
+  color: rgba(157, 0, 0, 0.598);
   font-size: 120px;
   padding: 10px;
   cursor: pointer;
@@ -317,21 +334,23 @@ nav {
 }
 
 #lightbox img#lightbox-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  max-width: 50%;
-  max-height: 60%;
-  border: 2px solid #f5831876;
-  border-radius: 0px;
-  box-shadow: 0 0 15px #f5c51800;
-  background-color: #000;
-  position: absolute;
-  top: var(--lightbox-img-y, 50px);
-  left: var(--lightbox-img-x, 0px);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 70%;
+    max-height: 75%;
+    border: 2px solid #f5831876;
+    border-radius: 0px;
+    box-shadow: 0 0 15px #f5c51800;
+    background-color: #0d0d0d;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* This centers the image */
+
+    z-index: 999; /* Optional: ensure it appears above other content */
 }
-
-
 
 
 
