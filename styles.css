@@ -83,10 +83,10 @@ header {
 /*EDIT THIS SIDEBAR!*/
 .sidebar {
   position: fixed;
-  top: 50px;
+  top: 80px;
   left: 0;
   width: 250px;
-  height: calc(100vh - 130px);
+  height: calc(500vh - 150px);
   background-color: #0d0f14;
   border-right: 3px solid #230000;
   padding: 20px;
