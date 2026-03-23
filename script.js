@@ -8,6 +8,12 @@ const nextBtn = document.getElementById('next');
 let currentAlbum = [];
 let currentIndex = 0;
 
+const sidebar = document.querySelector('.sidebar');
+
+sidebar.addEventListener('wheel', (e) => {
+  sidebar.scrollTop += e.deltaY;
+});
+
 // Organize images into albums
 const albumMap = {};
 const allImages = document.querySelectorAll('.grid img');

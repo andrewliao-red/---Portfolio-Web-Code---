@@ -23,8 +23,6 @@ body.no-scroll {
   pointer-events: none;
 }
 
-
-
 header, footer {
   background-color: #000000;
   padding: 20px;
@@ -41,7 +39,7 @@ footer {
   width: 100%;
   height: 50px;
   background: linear-gradient(to right, #0d0f14, #0d0f14, #3a0000);
-  border-top: 3px solid #230000;
+  border-top: 1px solid #230000;
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -56,7 +54,7 @@ header {
   width: 100%;
   height: 80px;
   background: linear-gradient(to right, #0d0f14, #0d0f14, #3a0000); /* black to red gradient */
-  border-bottom: 3px solid #230000; /* edit this for the border! */
+  border-bottom: 1px solid #230000; /* edit this for the border! */
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -65,19 +63,8 @@ header {
 
 
 .container {
-  display: flex;
-  min-height: calc(100vh - 120px);
-}
-
-.sidebar {
-  background-color: #3e0202;
-  width: 600;
-  height: 600;
-  padding: 30px 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-right: 2px solid #b70a0a6c;
+  height: calc(100vh - 130px);
+  overflow: visible;
 }
 
 /*EDIT THIS SIDEBAR!*/
@@ -86,15 +73,21 @@ header {
   top: 80px;
   left: 0;
   width: 250px;
-  height: calc(500vh - 150px);
+
+  height: calc(100vh - 130px); /* fits between header + footer */
+  
   background-color: #0d0f14;
-  border-right: 3px solid #230000;
+  border-right: 1px solid #230000;
   padding: 20px;
   box-sizing: border-box;
-  color: #f5c518;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  overflow-y: auto; /* 🔥 THIS enables sidebar scrolling */
+  overflow-x: hidden;
+
   z-index: 1000;
 }
 
@@ -115,6 +108,12 @@ header {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.sidebar-nav {
+  width: 100%;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
 .sidebar-nav ul li {
   margin-bottom: 1px;
   text-align: left;
@@ -124,7 +123,7 @@ header {
   color: #ff91007d;
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
   display: block;
   padding: 6px 0px;
   border-radius: 5px;
@@ -137,6 +136,19 @@ header {
   padding: 10px;
 }
 
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #f5831876;
+  border-radius: 2px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #111;
+}
+
 main {
   flex-grow: 1;
   padding: 30px;
@@ -147,8 +159,8 @@ main {
 nav {
   background-color: #ff000000;
   padding: 10px 20px;
-  border-top: 2px solid #680000;
-  border-bottom: 2px solid #680000;
+  border-top: 1px solid #680000;
+  border-bottom: 1px solid #680000;
   margin-bottom: 30px;
 }
 
@@ -186,7 +198,7 @@ nav {
   width: 100%;
   aspect-ratio: 1 / 1.05;
   object-fit: cover;
-  border: 2px solid #ff000030;
+  border: 1px solid #ff000030;
   border-radius: 0px;
   cursor: pointer;
   transition: transform 0.25s ease;
