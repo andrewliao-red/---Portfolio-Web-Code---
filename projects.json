@@ -1,0 +1,277 @@
+[
+    {
+        "id": "hopeandanchor",
+        "title": "Hope & Anchor",
+        "category": "design",
+        "year": "2025",
+        "role": "Brand Identity",
+        "thumbnail": "portfolio/editorial/hopeandanchor/hopeandanchor1.png",
+        "description": "A nautical-inspired visual identity system developed for a local Rhode Island business.",
+        "gallery": [
+            "portfolio/editorial/hopeandanchor/hopeandanchor1.png",
+            "portfolio/editorial/hopeandanchor/hna1.png",
+            "portfolio/editorial/hopeandanchor/hna2.png",
+            "portfolio/editorial/hopeandanchor/hna3.png"
+        ]
+    },
+    {
+        "id": "cute-interesting-zany",
+        "title": "Words & Motion",
+        "category": "motion",
+        "year": "2025",
+        "role": "Motion Graphics",
+        "thumbnail": "portfolio/motiongraphic/type3-zany.gif",
+        "description": "Selected motion design work showcasing typography, transitions, and visual systems.",
+        "gallery": [
+            "portfolio/motiongraphic/type3-zany.gif",
+            "portfolio/motiongraphic/type3-cute.gif",
+            "portfolio/motiongraphic/type3-interesting.gif"
+        ]
+    },
+    {
+        "id": "photographics",
+        "title": "Photographic Process Book",
+        "category": "editorial",
+        "year": "2024",
+        "role": "Photography",
+        "thumbnail": "portfolio/editorial/photographics/process1.png",
+        "description": "A 40-page editorial deep dive into the architectural brutalism and neon glow of modern sci-fi.",
+        "gallery": [
+            "portfolio/editorial/photographics/process1.png",
+            "portfolio/editorial/photographics/process2.png",
+            "portfolio/editorial/photographics/process3.png",
+            "portfolio/editorial/photographics/process4.png",
+            "portfolio/editorial/photographics/process5.png",
+            "portfolio/editorial/photographics/process6.png",
+            "portfolio/editorial/photographics/process7.png",
+            "portfolio/editorial/photographics/process8.png",
+            "portfolio/editorial/photographics/process9.png",
+            "portfolio/editorial/photographics/process10.png",
+            "portfolio/editorial/photographics/process11.png",
+            "portfolio/editorial/photographics/process12.png",
+            "portfolio/editorial/photographics/process13.png",
+            "portfolio/editorial/photographics/process14.png",
+            "portfolio/editorial/photographics/process15.png",
+            "portfolio/editorial/photographics/process16.png",
+            "portfolio/editorial/photographics/process17.png",
+            "portfolio/editorial/photographics/process18.png",
+            "portfolio/editorial/photographics/process19.png",
+            "portfolio/editorial/photographics/process20.png",
+            "portfolio/editorial/photographics/process21.png",
+            "portfolio/editorial/photographics/process22.png"
+        ]
+    },
+    {
+        "id": "collection-poster",
+        "title": "Cyberpunk Poster Series",
+        "category": "design",
+        "year": "2025",
+        "role": "Poster Series",
+        "thumbnail": "portfolio/graphicdesign/collectionposter/design-by-dystopia.webp",
+        "description": "A sleek, dark-mode exclusive web dashboard for a cryptocurrency analytics startup.",
+        "gallery": [
+            "portfolio/graphicdesign/collectionposter/design-by-dystopia.webp",
+            "portfolio/graphicdesign/collectionposter/flesh-and-steel.webp"
+        ]
+    },
+    {
+        "id": "typographic-symphony",
+        "title": "Typographic Symphony",
+        "category": "design",
+        "year": "2024",
+        "role": "Typographic Research",
+        "thumbnail": "portfolio/graphicdesign/typographicsymphonyposter/typosymphony.png",
+        "description": "Typographic Symphony was a poster design based on research regarding the history of typographic design.",
+        "gallery": [
+            "portfolio/graphicdesign/typographicsymphonyposter/typosymphony.png"
+        ]
+    },
+    {
+        "id": "wrath-of-reyath",
+        "title": "Wrath of Reyath (Board Game Concept)",
+        "category": "design",
+        "year": "2025",
+        "role": "Data Visualization",
+        "thumbnail": "portfolio/graphicdesign/wrathofreyath/full-layout.png",
+        "description": "A poster series dedicated to the geometric and futuristic curves of the Orbitron typeface.",
+        "gallery": [
+            "portfolio/graphicdesign/wrathofreyath/full-layout.png",
+            "portfolio/graphicdesign/wrathofreyath/closeup1.png",
+            "portfolio/graphicdesign/wrathofreyath/closeup2.png",
+            "portfolio/graphicdesign/wrathofreyath/closeup3.png",
+            "portfolio/graphicdesign/wrathofreyath/characterpieces.png"
+        ]
+    },
+    {
+        "id": "type-design",
+        "title": "Type Design w/ Letters",
+        "category": "design",
+        "year": "2024",
+        "role": "Typographic Design",
+        "thumbnail": "portfolio/graphicdesign/typography/lxc/type1.png",
+        "description": "A design experiment using only 2—3 letters to come up with typographic designs within a square frame.",
+        "gallery": [
+            "portfolio/graphicdesign/typography/lxc/type1.png",
+            "portfolio/graphicdesign/typography/lxc/type9.png",
+            "portfolio/graphicdesign/typography/lxc/type8.png",
+            "portfolio/graphicdesign/typography/lxc/type10.png",
+            "portfolio/graphicdesign/typography/lxc/type4.png"
+        ]
+    },
+    {
+        "id": "santoro-motion-reel-2025",
+        "title": "Motion Reel — Santoro Design, LLC",
+        "category": "motion",
+        "year": "2026",
+        "role": "Motion Graphics",
+        "thumbnail": "portfolio/motiongraphic/santoro-thumbnail.png",
+        "description": "A looping 3D animation project synchronizing heavy sans-serif typography with electronic beats.",
+        "gallery": [
+        ],
+        "video": "portfolio/motiongraphic/santoro-motion-reel-2025.mp4"
+    },
+    {
+        "id": "lights-out",
+        "title": "Lights Out - Mobile App Concept",
+        "category": "design",
+        "year": "2024",
+        "role": "UX/UI Design",
+        "thumbnail": "portfolio/graphicdesign/lightsout/lightsout1.png",
+        "description": "Sustainable coffee packaging system focused on minimalist typography and tactile materials.",
+        "gallery": [
+            "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=1200"
+        ]
+    },
+    {
+        "id": "eco-beats",
+        "title": "Eco-Beats: Vibing with Nature",
+        "category": "web",
+        "year": "2026",
+        "role": "Web Design",
+        "thumbnail": "portfolio/web/ecobeats/eco-beats-ui-1.png",
+        "description": "An experimental audio visualizer built in the browser using the Web Audio API.",
+        "gallery": [
+            "portfolio/web/ecobeats/eco-beats-ui-1.png",
+            "portfolio/web/ecobeats/eco-beats-ui-2.png",
+            "portfolio/web/ecobeats/eco-beats-ui-3.png",
+            "portfolio/web/ecobeats/eco-beats-ui-4.png",
+            "portfolio/web/ecobeats/eco-beats-ui-5.png",
+            "portfolio/web/ecobeats/eco-beats-ui-6.png"
+        ]
+    },
+    {
+        "id": "gabe-interview",
+        "title": "Gabed.exe — An Interview with Gabriel Drozdov",
+        "category": "editorial",
+        "year": "2026",
+        "role": "Layout and Editorial Design",
+        "thumbnail": "portfolio/editorial/ds4editorial1.jpg",
+        "description": "The premiere issue of an independent art magazine exploring negative space in urban environments.",
+        "gallery": [
+            "portfolio/editorial/ds4editorial1.jpg",
+            "portfolio/editorial/ds4editorial2.jpg",
+            "portfolio/editorial/ds4editorial3.jpg",
+            "portfolio/editorial/ds4editorial4.jpg"
+        ]
+    },
+    {
+        "id": "pranks-tv",
+        "title": "Pranks TV",
+        "category": "editorial",
+        "year": "2025",
+        "role": "Video Art",
+        "thumbnail": "portfolio/editorial/prankstv/pranks-tv-book-front.png",
+        "description": "A collection of short loops created by running digital footage through physical VHS hardware.",
+        "gallery": [
+            "portfolio/editorial/prankstv/pranks-tv-book-front.png",
+            "portfolio/editorial/prankstv/pranks-tv-book-back.png"
+        ]
+    },
+    {
+        "id": "north-coast-music-festival",
+        "title": "North Coast Music Festival",
+        "category": "web",
+        "year": "2025",
+        "role": "UI/UX Brand Design",
+        "thumbnail": "portfolio/graphicdesign/musicfestival/ncmf6.png",
+        "description": "Simulating biological flocking behavior using over 50,000 independent particles in WebGL.",
+        "gallery": [
+            "portfolio/graphicdesign/musicfestival/ncmf6.png"
+        ]
+    },
+    {
+        "id": "lift-with-luxury",
+        "title": "Lift With Luxury",
+        "category": "design",
+        "year": "2024",
+        "role": "Graphic Design",
+        "thumbnail": "portfolio/motiongraphic/lwl-compressed.mp4",
+        "description": "A brutalist portfolio website for an architecture firm, utilizing heavy borders and raw HTML structure.",
+        "gallery": [
+            "portfolio/graphicdesign/liftwithluxury/lwl1.png",
+            "portfolio/graphicdesign/liftwithluxury/lwl2.png",
+            "portfolio/graphicdesign/liftwithluxury/lwl3.png",
+            "portfolio/graphicdesign/liftwithluxury/lwlpins.png"
+        ]
+    },
+    {
+        "id": "elemental-flare",
+        "title": "Elemental Flare",
+        "category": "motion",
+        "year": "2025",
+        "role": "Color Theory and Motion Graphics",
+        "thumbnail": "portfolio/graphicdesign/elementalflare/elementalflare1.png",
+        "description": "Exploring fluid simulations and reflective metallic materials in Cinema 4D.",
+        "gallery": [
+            "portfolio/graphicdesign/elementalflare/elementalflare1.png",
+            "portfolio/graphicdesign/elementalflare/elementalflare3.png",
+            "portfolio/motiongraphic/elementalflare4.gif"
+        ]
+    },
+    {
+        "id": "instinct-vs-code",
+        "title": "Instinct VS Code",
+        "category": "editorial",
+        "year": "2025",
+        "role": "Book Binding",
+        "thumbnail": "portfolio/editorial/instinctvcode/instinctvcode2.png",
+        "description": "Complex geometric shapes and illusions built entirely without images or JavaScript.",
+        "gallery": [
+            "portfolio/editorial/instinctvcode/instinctvcode2.png",
+            "portfolio/editorial/instinctvcode/instinctvcode5.png",
+            "portfolio/editorial/instinctvcode/instinctvcode6.png"
+        ]
+    },
+    {
+        "id": "worlds-within-tree",
+        "title": "Worlds Within the Tree",
+        "role": "WEB PROGRAMMING",
+        "year": "2026",
+        "category": "web",
+        "thumbnail": "portfolio/web/worldswithin/wwtt-opening.png",
+        "description": "This is the full, long description that shows up when the project is opened...",
+        "gallery": ["portfolio/web/worldswithin/wwtt-opening.png", 
+                    "portfolio/web/worldswithin/wwtt-homepage.png",
+                    "portfolio/web/worldswithin/wwtt-frost.png"],
+        "isFeatured": true,
+        "featuredDesc": "An experimental web experience exploring recursive digital environments and non-linear narrative structures."
+    },
+
+    {
+        "id": "offline-worlds",
+        "title": "Offline Worlds",
+        "role": "CAMPAIGN BUILDING",
+        "year": "2025",
+        "category": "web",
+        "thumbnail": "portfolio/web/offlineworlds/thumbnail.png",
+        "description": "Offline Worlds is an online archive where people who also share the sense of nostalgia for particular video games that are no longer playable can share info about their video games that they can only ever wish to be able to play again.",
+        "gallery": [
+            "portfolio/web/offlineworlds/yt-thumbnail.png",
+            "portfolio/web/offlineworlds/overview.png",
+            "portfolio/web/offlineworlds/storyboard.png"
+        ],
+        "video": "portfolio/videos/offline-worlds-trailer.mp4",
+        "isFeatured": true,
+        "featuredDesc": "A brutalist exploration of disconnected digital states, utilizing raw typography and stark contrast."
+    }
+]

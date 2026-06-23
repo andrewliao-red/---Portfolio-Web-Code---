@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="sitedecor/branding/LOGONEWandrewliao.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="eSr9i72BbqMlgqI7jyIzm8yguAuZGi2Y7lK4sTviAV0" />
+    <title>Andrew Liao | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="system-hud">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+    </div>
+
+    <div class="custom-cursor" id="cursor"></div>
+    <div id="particle-container"></div>
+
+    <div class="ambient-gradient"></div>
+
+    <button class="nav-toggle hover-target" id="navToggle">
+        <span class="toggle-text">MENU</span>
+        <span class="toggle-icon">☰</span>
+    </button>
+
+    <aside class="sidebar-slidable" id="sidebar">
+        <div class="logo">
+            <h1>ANDREW</h1>
+            <h1>LIAO</h1>
+        </div>
+        <div class="descriptor">
+            Designer<br>
+            Animator<br>
+            Web Developer
+        </div>
+        <nav>
+            <button class="nav-btn active hover-target" data-category="all">ALL [00]</button>
+            <button class="nav-btn hover-target" data-category="design">DESIGN [01]</button>
+            <button class="nav-btn hover-target" data-category="web">WEB [02]</button>
+            <button class="nav-btn hover-target" data-category="editorial">EDITORIAL [03]</button>
+            <button class="nav-btn hover-target" data-category="motion">MOTION [04]</button>
+            <button class="nav-btn hover-target" data-category="experiments">EXPERIMENTS [05]</button>
+            <div style="height: 2rem;"></div> <button class="nav-btn hover-target" id="aboutBtn" style="color: var(--gold);">ABOUT [06]</button>
+        </nav>
+    </aside>
+
+    <main id="main-content">
+        <section class="hero">
+                <div class="hero">
+                    <span class="hero-label">ANDREW LIAO</span>
+                    <h1 id="hero-headline">Orchestrating visual systems, <span>motion experiences,</span> and digital identities.</h1>
+                    
+                    <div class="hero-divider"></div>
+                </div>
+        </section>
+
+        <section class="project-grid" id="project-grid"></section>
+        
+        <section id="project-view" class="overlay-view">
+            <div class="overlay-bg"></div>
+            <div class="overlay-inner">
+                <button id="back-btn" class="hover-target back-action">
+                    ← BACK
+                </button>
+                <div id="project-content"></div>
+            </div>
+        </section>
+
+        <section id="about-view" class="overlay-view">
+            <div class="overlay-bg"></div>
+            <div class="overlay-inner">
+                <button id="about-back-btn" class="hover-target back-action">
+                    ← BACK
+                </button>
+
+                <div class="about-container">
+                    <h1 class="about-title">ANDREW <span>LIAO</span></h1>
+                    <h3 class="about-subtitle">RISD 2027 • Designer • Animator</h3>
+                    <div class="about-body">
+                        <p>Welcome to my website. I'm currently an undergraduate student at the 
+                            Rhode Island School of Design (RISD), specializing in the intersection of motion graphics, 
+                            digital development, and bold design.</p>
+                        <p>My work relies heavily on pushing visual boundaries, establishing strong aesthetic identities,
+                            and creating digital experiences that feel alive. When I'm not designing, I'm constantly 
+                            experimenting with new creative coding techniques and motion loops.</p>
+                    </div>
+                    <div class="about-links">
+                        <a href="https://youtube.com/" target="_blank" class="hover-target">YOUTUBE ↗</a>
+                        <a href="https://linkedin.com/" target="_blank" class="hover-target">LINKEDIN ↗</a>
+                        <a href="https://handshake.com/" target="_blank" class="hover-target">HANDSHAKE ↗</a>
+                    </div>
+
+                    <div class="about-timeline">
+                        <div class="timeline-line"></div>
+
+                        <div class="timeline-item" style="--delay: 0.1s;">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content hover-target">
+                                <span class="timeline-date">2018</span>
+                                <p>Began experimenting in 3D animation softwares and learning motion.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" style="--delay: 0.2s;">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content hover-target">
+                                <span class="timeline-date">FALL 2023</span>
+                                <p>Began my first year in RISD.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" style="--delay: 0.3s;">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content hover-target">
+                                <span class="timeline-date">SUMMER 2025</span>
+                                <p>Graphic Design Intern at MAX'IS CREATIONS (Boston, Massachusetts).</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" style="--delay: 0.4s;">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content hover-target">
+                                <span class="timeline-date">FALL 2025</span>
+                                <p>Took on the role as Club President for RISD MMA.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" style="--delay: 0.5s;">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content hover-target">
+                                <span class="timeline-date">DEC 2025 — FEB 2026</span>
+                                <p>Worked overseas in New Taipei City, Taiwan for Engine Studios as an animation intern, working closely under director Vick Wang.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" style="--delay: 0.6s;">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content hover-target">
+                                <span class="timeline-date">SPRING 2026 — PRESENT</span>
+                                <p>Interning as a Brand and Website Design Intern at Santoro Design, LLC in Providence, Rhode Island.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="fullscreen-view" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.95); z-index: 2000; justify-content: center; align-items: center;">
+            <div id="fullscreen-close" class="hover-target" style="position: absolute; top: 2rem; right: 3rem; color: var(--gold); font-size: 2.5rem; cursor: pointer; user-select: none;">✕</div>
+            <img id="fullscreen-img" src="" style="max-width: 90vw; max-height: 90vh; object-fit: contain; border: 1px solid var(--gold); pointer-events: none;">
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
