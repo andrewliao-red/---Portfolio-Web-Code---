@@ -6,7 +6,7 @@
         "year": "2025",
         "role": "Brand Identity",
         "thumbnail": "portfolio/editorial/hopeandanchor/hopeandanchor1.png",
-        "description": "A nautical-inspired visual identity system developed for a local Rhode Island business.",
+        "description": "Hope & Anchor is a nautical-themed brand identity system design inspired from local Rhode Island businesses. By blending in heritage with modern graphic elements, this project encompasses logo design, typographic selection, and tangible marketing materials to create a consistent visual system.",
         "gallery": [
             "portfolio/editorial/hopeandanchor/hopeandanchor1.png",
             "portfolio/editorial/hopeandanchor/hna1.png",
@@ -15,17 +15,129 @@
         ]
     },
     {
-        "id": "cute-interesting-zany",
-        "title": "Words & Motion",
-        "category": "motion",
+        "id": "collection-poster",
+        "title": "Cyberpunk Poster Series",
+        "category": "design",
         "year": "2025",
-        "role": "Motion Graphics",
-        "thumbnail": "portfolio/motiongraphic/type3-zany.gif",
-        "description": "Selected motion design work showcasing typography, transitions, and visual systems.",
+        "role": "Poster Series",
+        "thumbnail": "portfolio/graphicdesign/collectionposter/design-by-dystopia.webp",
+        "description": "A dual poster series showcasing a collective narrative of the history of the cyberpunk genre, starting from original such as The Centauri Device, Ender's Game, Blade Runner, Neuromancer, and how they influenced a wave of modern depictions of futuristic cyberpunk dystopias built on the concept of identity and rebelling against corporate blandness. 'Flesh and Steel' explores the two sides of cyberpunk — uniform logic against neon identity. 'Design by Dystopia' explores the evolution of the cyberpunk genre starting from books like The Shockwave Rider, The Centauri Device, and Wolfbane (cyberpunk classics), and its predecessors including Blade Runner (1982), Ender's Game, Neuromancer, and the more modern depictions of futuristic technology including The Mortality Doctrine trilogy.",
         "gallery": [
-            "portfolio/motiongraphic/type3-zany.gif",
-            "portfolio/motiongraphic/type3-cute.gif",
-            "portfolio/motiongraphic/type3-interesting.gif"
+            "portfolio/graphicdesign/collectionposter/design-by-dystopia.webp",
+            "portfolio/graphicdesign/collectionposter/flesh-and-steel.webp"
+        ]
+    },
+    {
+        "id": "wrath-of-reyath",
+        "title": "Wrath of Reyath (Board Game Concept)",
+        "category": "design",
+        "year": "2025",
+        "role": "Data Visualization",
+        "thumbnail": "portfolio/graphicdesign/wrathofreyath/full-layout.png",
+        "description": "Wrath of Reyath is a conceptual board game design that combines dark-fantasy world-building through functional data visualization. The project takes on the challenge of displaying complex data through the lens of complex game mechanics and story as a form of entertainment. The result is a perfect blend of storytelling and accessible statistical tracking.",
+        "gallery": [
+            "portfolio/graphicdesign/wrathofreyath/full-layout.png",
+            "portfolio/graphicdesign/wrathofreyath/closeup1.png",
+            "portfolio/graphicdesign/wrathofreyath/closeup2.png",
+            "portfolio/graphicdesign/wrathofreyath/closeup3.png",
+            "portfolio/graphicdesign/wrathofreyath/characterpieces.png"
+        ]
+    },
+    {
+        "id": "typographic-symphony",
+        "title": "Typographic Symphony",
+        "category": "design",
+        "year": "2024",
+        "role": "Typographic Research",
+        "thumbnail": "portfolio/graphicdesign/typographicsymphonyposter/typosymphony.png",
+        "description": "Typographic Symphony is a visually-striking poster design rooted in deep research regarding the historical evolution of typography. By researching based off of Emmett McBain's typographic album cover designs, we are able to see how typography shares evolution in different forms and materials.",
+        "gallery": [
+            "portfolio/graphicdesign/typographicsymphonyposter/typosymphony.png"
+        ]
+    },
+    {
+        "id": "type-design",
+        "title": "Type Design w/ Letters",
+        "category": "design",
+        "year": "2024",
+        "role": "Typographic Design",
+        "thumbnail": "portfolio/graphicdesign/typography/lxc/type1.png",
+        "description": "A minimalist typographic experiment and exercise restricting compositions to only 2–3 letters, exploring spatial relationships, weight, and negative space within a strict square frame.",
+        "gallery": [
+            "portfolio/graphicdesign/typography/lxc/type1.png",
+            "portfolio/graphicdesign/typography/lxc/type9.png",
+            "portfolio/graphicdesign/typography/lxc/type8.png",
+            "portfolio/graphicdesign/typography/lxc/type10.png",
+            "portfolio/graphicdesign/typography/lxc/type4.png"
+        ]
+    },
+    {
+        "id": "lights-out",
+        "title": "Lights Out - Mobile App Concept",
+        "category": "design",
+        "year": "2024",
+        "role": "UX/UI Design",
+        "thumbnail": "portfolio/graphicdesign/lightsout/lightsout1.png",
+        "description": "Lights Out is a user-friendly app designed to teach boxing, kickboxing, and self-defense to anyone, regardless of experience. By taking a quick survey, users receive personalized training tailored to their skill level and goals. The app is perfect for those who can’t afford gym memberships, have busy schedules, or prefer training in a private setting.  Beyond just learning to fight, Lights Out fosters a supportive community where users can connect, share progress, and offer advice. Promotion efforts include posters, business cards, signs, and stickers to spread awareness.",
+        "gallery": [
+            "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=1200"
+        ]
+    },
+    {
+        "id": "lift-with-luxury",
+        "title": "Lift With Luxury",
+        "category": "design",
+        "year": "2024",
+        "role": "Graphic Design",
+        "thumbnail": "portfolio/graphicdesign/liftwithluxury/lwl-thumbnail.png",
+        "description": "'Lift with Luxury' began as an introductory branding project focused on complex design concepts from a singular object. For this project, the entire visual identity and aesthetic design was built around the form of a wine glass. The resulting designs explore how simple objects like said wine glass, can be translated into sophisticated graphic elements, and the ability to extract branding systems from everyday minimalist sources.",
+        "gallery": [
+            "portfolio/graphicdesign/liftwithluxury/lwl1.png",
+            "portfolio/graphicdesign/liftwithluxury/lwl2.png",
+            "portfolio/graphicdesign/liftwithluxury/lwl3.png",
+            "portfolio/graphicdesign/liftwithluxury/lwlpins.png"
+        ]
+    },
+    {
+        "id": "gabe-interview",
+        "title": "Gabed.exe — An Interview with Gabriel Drozdov",
+        "category": "editorial",
+        "year": "2026",
+        "role": "Layout and Editorial Design",
+        "thumbnail": "portfolio/editorial/ds4editorial1.jpg",
+        "description": "Gabed.exe is a specialized editorial design project centered around an exclusive interview with Gabriel Drozdov. The layout embraces experimental typography and fixed grid structures to mirror the technical themes discussed within the interview through a 1900's retro UI aesthetic, touching upon an era of pre-minimalist UI design prevailed. This piece successfully translates a digital-focused conversation into a striking physical print format.",
+        "gallery": [
+            "portfolio/editorial/ds4editorial1.jpg",
+            "portfolio/editorial/ds4editorial2.jpg",
+            "portfolio/editorial/ds4editorial3.jpg",
+            "portfolio/editorial/ds4editorial4.jpg"
+        ]
+    },
+    {
+        "id": "pranks-tv",
+        "title": "Pranks TV",
+        "category": "editorial",
+        "year": "2025",
+        "role": "Video Art",
+        "thumbnail": "portfolio/editorial/prankstv/pranks-tv-book-front.png",
+        "description": "This unique publishing project translates the documentary of Pranks TV by Leslie Asako Gladsjo, into a static editorial format. Drawing inspiration from early 2000s video art and VHS graphics, the design utilizes bold colors and fragmented layouts. Each 'prankster' featured in this editorial is given a distinct color palette and typography. The book attempts to capture the spontaneous and often-disruptive nature of early screen-based media directly onto the printed page, and stands as a bold exploration of how digitial subcultures can influence unorthodox bookbinding and layout design. Featuring Joe Coleman, Mark Pauline, Karen Finley, Frank Discussion, and Boyd Rice.",
+        "gallery": [
+            "portfolio/editorial/prankstv/pranks-tv-book-front.png",
+            "portfolio/editorial/prankstv/pranks-tv-book-back.png"
+        ]
+    },
+    {
+        "id": "instinct-vs-code",
+        "title": "Instinct VS Code",
+        "category": "editorial",
+        "year": "2025",
+        "role": "Book Binding",
+        "thumbnail": "portfolio/editorial/instinctvcode/instinctvcode2.png",
+        "description": "Instinct vs Code is an editorial that uses two rivaling articles found online.",
+        "gallery": [
+            "portfolio/editorial/instinctvcode/instinctvcode2.png",
+            "portfolio/editorial/instinctvcode/instinctvcode5.png",
+            "portfolio/editorial/instinctvcode/instinctvcode6.png"
         ]
     },
     {
@@ -35,7 +147,7 @@
         "year": "2024",
         "role": "Photography",
         "thumbnail": "portfolio/editorial/photographics/process1.png",
-        "description": "A 40-page editorial deep dive into the architectural brutalism and neon glow of modern sci-fi.",
+        "description": "A 22-paged introduction into the fundamentals of photography, and photo-editting.",
         "gallery": [
             "portfolio/editorial/photographics/process1.png",
             "portfolio/editorial/photographics/process2.png",
@@ -62,84 +174,53 @@
         ]
     },
     {
-        "id": "collection-poster",
-        "title": "Cyberpunk Poster Series",
-        "category": "design",
-        "year": "2025",
-        "role": "Poster Series",
-        "thumbnail": "portfolio/graphicdesign/collectionposter/design-by-dystopia.webp",
-        "description": "A sleek, dark-mode exclusive web dashboard for a cryptocurrency analytics startup.",
-        "gallery": [
-            "portfolio/graphicdesign/collectionposter/design-by-dystopia.webp",
-            "portfolio/graphicdesign/collectionposter/flesh-and-steel.webp"
-        ]
-    },
-    {
-        "id": "typographic-symphony",
-        "title": "Typographic Symphony",
-        "category": "design",
-        "year": "2024",
-        "role": "Typographic Research",
-        "thumbnail": "portfolio/graphicdesign/typographicsymphonyposter/typosymphony.png",
-        "description": "Typographic Symphony was a poster design based on research regarding the history of typographic design.",
-        "gallery": [
-            "portfolio/graphicdesign/typographicsymphonyposter/typosymphony.png"
-        ]
-    },
-    {
-        "id": "wrath-of-reyath",
-        "title": "Wrath of Reyath (Board Game Concept)",
-        "category": "design",
-        "year": "2025",
-        "role": "Data Visualization",
-        "thumbnail": "portfolio/graphicdesign/wrathofreyath/full-layout.png",
-        "description": "A poster series dedicated to the geometric and futuristic curves of the Orbitron typeface.",
-        "gallery": [
-            "portfolio/graphicdesign/wrathofreyath/full-layout.png",
-            "portfolio/graphicdesign/wrathofreyath/closeup1.png",
-            "portfolio/graphicdesign/wrathofreyath/closeup2.png",
-            "portfolio/graphicdesign/wrathofreyath/closeup3.png",
-            "portfolio/graphicdesign/wrathofreyath/characterpieces.png"
-        ]
-    },
-    {
-        "id": "type-design",
-        "title": "Type Design w/ Letters",
-        "category": "design",
-        "year": "2024",
-        "role": "Typographic Design",
-        "thumbnail": "portfolio/graphicdesign/typography/lxc/type1.png",
-        "description": "A design experiment using only 2—3 letters to come up with typographic designs within a square frame.",
-        "gallery": [
-            "portfolio/graphicdesign/typography/lxc/type1.png",
-            "portfolio/graphicdesign/typography/lxc/type9.png",
-            "portfolio/graphicdesign/typography/lxc/type8.png",
-            "portfolio/graphicdesign/typography/lxc/type10.png",
-            "portfolio/graphicdesign/typography/lxc/type4.png"
-        ]
-    },
-    {
         "id": "santoro-motion-reel-2025",
         "title": "Motion Reel — Santoro Design, LLC",
         "category": "motion",
         "year": "2026",
         "role": "Motion Graphics",
         "thumbnail": "portfolio/motiongraphic/santoro-thumbnail.png",
-        "description": "A looping 3D animation project synchronizing heavy sans-serif typography with electronic beats.",
-        "gallery": [
-        ],
+        "description": "A dynamic, fast-paced motion graphics reel showcasing the best animated works, transitions, and visual designs produced for Santoro Design, LLC.",
+        "gallery": [],
         "video": "portfolio/motiongraphic/santoro-motion-reel-2025.mp4"
     },
     {
-        "id": "lights-out",
-        "title": "Lights Out - Mobile App Concept",
-        "category": "design",
-        "year": "2024",
-        "role": "UX/UI Design",
-        "thumbnail": "portfolio/graphicdesign/lightsout/lightsout1.png",
-        "description": "Sustainable coffee packaging system focused on minimalist typography and tactile materials.",
+        "id": "outlook-video",
+        "title": "Outlook — Exposure Therapy Campaign",
+        "category": "motion",
+        "year": "2026",
+        "role": "Motion Graphics",
+        "thumbnail": "portfolio/motiongraphic/outlook-thumbnail.png",
+        "description": "A motion graphic video created for Project REACH by Dr. Hannah E. Frank at Brown University to campaign for the awareness of exposure therapy, including what it is, how it is treated, and clearing any misunderstandings of exposure therapy. This motion graphics animation summarizes the importance of seeking exposure therapy through the usage of friendly mascots and vibrant but soft coloring.",
+        "gallery": [],
+        "video": "portfolio/motiongraphic/outlook-vid.mp4"
+    },
+    {
+        "id": "cute-interesting-zany",
+        "title": "Words & Motion",
+        "category": "motion",
+        "year": "2025",
+        "role": "Motion Graphics",
+        "thumbnail": "portfolio/motiongraphic/type3-zany.gif",
+        "description": "This project is a curated collection of experimental motion design focused heavily on expressive kinetic typography. The project explores how the meaning and emotions of specific words can be visually amplified through timing, easing and spatial manipulation. Each animation demonstrates seamless transitions and the creation of a consistent visual system across different words. By blending typography with animation, the three-worded series brings static lettering to life through motion.",
         "gallery": [
-            "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=1200"
+            "portfolio/motiongraphic/type3-zany.gif",
+            "portfolio/motiongraphic/type3-cute.gif",
+            "portfolio/motiongraphic/type3-interesting.gif"
+        ]
+    },
+    {
+        "id": "elemental-flare",
+        "title": "Elemental Flare",
+        "category": "motion",
+        "year": "2025",
+        "role": "Color Theory and Motion Graphics",
+        "thumbnail": "portfolio/graphicdesign/elementalflare/elementalflare1.png",
+        "description": "A seamless motion graphics exploration centered around the principles of color theory. Created using After Effects.",
+        "gallery": [
+            "portfolio/graphicdesign/elementalflare/elementalflare1.png",
+            "portfolio/graphicdesign/elementalflare/elementalflare3.png",
+            "portfolio/motiongraphic/elementalflare4.gif"
         ]
     },
     {
@@ -149,7 +230,7 @@
         "year": "2026",
         "role": "Web Design",
         "thumbnail": "portfolio/web/ecobeats/eco-beats-ui-1.png",
-        "description": "An experimental audio visualizer built in the browser using the Web Audio API.",
+        "description": "An experimental web-based audio visualizer leveraging the Web Audio API to create immersive, nature-inspired generative aesthetics that react to music. Each piece of nature has a distinct playlist of music put together that matches its environmental aesthetic.",
         "gallery": [
             "portfolio/web/ecobeats/eco-beats-ui-1.png",
             "portfolio/web/ecobeats/eco-beats-ui-2.png",
@@ -160,32 +241,20 @@
         ]
     },
     {
-        "id": "gabe-interview",
-        "title": "Gabed.exe — An Interview with Gabriel Drozdov",
-        "category": "editorial",
+        "id": "worlds-within-tree",
+        "title": "Worlds Within the Tree",
+        "role": "WEB PROGRAMMING",
         "year": "2026",
-        "role": "Layout and Editorial Design",
-        "thumbnail": "portfolio/editorial/ds4editorial1.jpg",
-        "description": "The premiere issue of an independent art magazine exploring negative space in urban environments.",
+        "category": "web",
+        "thumbnail": "portfolio/web/worldswithin/wwtt-opening.png",
+        "description": "This is the full, long description that shows up when the project is opened...",
         "gallery": [
-            "portfolio/editorial/ds4editorial1.jpg",
-            "portfolio/editorial/ds4editorial2.jpg",
-            "portfolio/editorial/ds4editorial3.jpg",
-            "portfolio/editorial/ds4editorial4.jpg"
-        ]
-    },
-    {
-        "id": "pranks-tv",
-        "title": "Pranks TV",
-        "category": "editorial",
-        "year": "2025",
-        "role": "Video Art",
-        "thumbnail": "portfolio/editorial/prankstv/pranks-tv-book-front.png",
-        "description": "A collection of short loops created by running digital footage through physical VHS hardware.",
-        "gallery": [
-            "portfolio/editorial/prankstv/pranks-tv-book-front.png",
-            "portfolio/editorial/prankstv/pranks-tv-book-back.png"
-        ]
+            "portfolio/web/worldswithin/wwtt-opening.png",
+            "portfolio/web/worldswithin/wwtt-homepage.png",
+            "portfolio/web/worldswithin/wwtt-frost.png"
+        ],
+        "isFeatured": true,
+        "featuredDesc": "An experimental web experience exploring recursive digital environments and non-linear narrative structures."
     },
     {
         "id": "north-coast-music-festival",
@@ -194,69 +263,11 @@
         "year": "2025",
         "role": "UI/UX Brand Design",
         "thumbnail": "portfolio/graphicdesign/musicfestival/ncmf6.png",
-        "description": "Simulating biological flocking behavior using over 50,000 independent particles in WebGL.",
+        "description": "A UI/UX brand design re-design concept for the North Coast Music Festival, capturing the event's vibrant energy through engaging and accessible web interfaces.",
         "gallery": [
             "portfolio/graphicdesign/musicfestival/ncmf6.png"
         ]
     },
-    {
-        "id": "lift-with-luxury",
-        "title": "Lift With Luxury",
-        "category": "design",
-        "year": "2024",
-        "role": "Graphic Design",
-        "thumbnail": "portfolio/motiongraphic/lwl-compressed.mp4",
-        "description": "A brutalist portfolio website for an architecture firm, utilizing heavy borders and raw HTML structure.",
-        "gallery": [
-            "portfolio/graphicdesign/liftwithluxury/lwl1.png",
-            "portfolio/graphicdesign/liftwithluxury/lwl2.png",
-            "portfolio/graphicdesign/liftwithluxury/lwl3.png",
-            "portfolio/graphicdesign/liftwithluxury/lwlpins.png"
-        ]
-    },
-    {
-        "id": "elemental-flare",
-        "title": "Elemental Flare",
-        "category": "motion",
-        "year": "2025",
-        "role": "Color Theory and Motion Graphics",
-        "thumbnail": "portfolio/graphicdesign/elementalflare/elementalflare1.png",
-        "description": "Exploring fluid simulations and reflective metallic materials in Cinema 4D.",
-        "gallery": [
-            "portfolio/graphicdesign/elementalflare/elementalflare1.png",
-            "portfolio/graphicdesign/elementalflare/elementalflare3.png",
-            "portfolio/motiongraphic/elementalflare4.gif"
-        ]
-    },
-    {
-        "id": "instinct-vs-code",
-        "title": "Instinct VS Code",
-        "category": "editorial",
-        "year": "2025",
-        "role": "Book Binding",
-        "thumbnail": "portfolio/editorial/instinctvcode/instinctvcode2.png",
-        "description": "Complex geometric shapes and illusions built entirely without images or JavaScript.",
-        "gallery": [
-            "portfolio/editorial/instinctvcode/instinctvcode2.png",
-            "portfolio/editorial/instinctvcode/instinctvcode5.png",
-            "portfolio/editorial/instinctvcode/instinctvcode6.png"
-        ]
-    },
-    {
-        "id": "worlds-within-tree",
-        "title": "Worlds Within the Tree",
-        "role": "WEB PROGRAMMING",
-        "year": "2026",
-        "category": "web",
-        "thumbnail": "portfolio/web/worldswithin/wwtt-opening.png",
-        "description": "This is the full, long description that shows up when the project is opened...",
-        "gallery": ["portfolio/web/worldswithin/wwtt-opening.png", 
-                    "portfolio/web/worldswithin/wwtt-homepage.png",
-                    "portfolio/web/worldswithin/wwtt-frost.png"],
-        "isFeatured": true,
-        "featuredDesc": "An experimental web experience exploring recursive digital environments and non-linear narrative structures."
-    },
-
     {
         "id": "offline-worlds",
         "title": "Offline Worlds",
@@ -264,7 +275,7 @@
         "year": "2025",
         "category": "web",
         "thumbnail": "portfolio/web/offlineworlds/thumbnail.png",
-        "description": "Offline Worlds is an online archive where people who also share the sense of nostalgia for particular video games that are no longer playable can share info about their video games that they can only ever wish to be able to play again.",
+        "description": "Offline Worlds is an online archive where people who also share the sense of nostalgia for particular video games that are no longer playable can share info about their video games that they can only ever wish to be able to play again. The platform offers a game-based interactive digital space where online communities can gather to share memories. The project ultimately acts as an emotional preservation effort for gaming histories that can now only be remembered and never played.",
         "gallery": [
             "portfolio/web/offlineworlds/yt-thumbnail.png",
             "portfolio/web/offlineworlds/overview.png",
