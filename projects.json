@@ -230,6 +230,7 @@
         "year": "2026",
         "role": "Web Design",
         "thumbnail": "portfolio/web/ecobeats/eco-beats-ui-1.png",
+        "link": "https://andrewliao-red.github.io/Eco-Beats-Vibing-With-Nature/",
         "description": "An experimental web-based audio visualizer leveraging the Web Audio API to create immersive, nature-inspired generative aesthetics that react to music. Each piece of nature has a distinct playlist of music put together that matches its environmental aesthetic.",
         "gallery": [
             "portfolio/web/ecobeats/eco-beats-ui-1.png",
@@ -247,6 +248,7 @@
         "year": "2026",
         "category": "web",
         "thumbnail": "portfolio/web/worldswithin/wwtt-opening.png",
+        "link": "https://andrewliao-red.github.io/Worlds-Within-The-Tree-AL/",
         "description": "This is the full, long description that shows up when the project is opened...",
         "gallery": [
             "portfolio/web/worldswithin/wwtt-opening.png",
@@ -275,6 +277,7 @@
         "year": "2025",
         "category": "web",
         "thumbnail": "portfolio/web/offlineworlds/thumbnail.png",
+        "link": "https://andrewliao-red.github.io/OfflineWorlds/",
         "description": "Offline Worlds is an online archive where people who also share the sense of nostalgia for particular video games that are no longer playable can share info about their video games that they can only ever wish to be able to play again. The platform offers a game-based interactive digital space where online communities can gather to share memories. The project ultimately acts as an emotional preservation effort for gaming histories that can now only be remembered and never played.",
         "gallery": [
             "portfolio/web/offlineworlds/yt-thumbnail.png",
