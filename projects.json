@@ -80,7 +80,18 @@
         "thumbnail": "portfolio/graphicdesign/lightsout/lightsout1.png",
         "description": "Lights Out is a user-friendly app designed to teach boxing, kickboxing, and self-defense to anyone, regardless of experience. By taking a quick survey, users receive personalized training tailored to their skill level and goals. The app is perfect for those who can’t afford gym memberships, have busy schedules, or prefer training in a private setting.  Beyond just learning to fight, Lights Out fosters a supportive community where users can connect, share progress, and offer advice. Promotion efforts include posters, business cards, signs, and stickers to spread awareness.",
         "gallery": [
-            "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=1200"
+            "portfolio/graphicdesign/lightsout/lightsout1.png",
+            "portfolio/graphicdesign/lightsout/lightsout2.png",
+            "portfolio/graphicdesign/lightsout/lightsout3.png",
+            "portfolio/graphicdesign/lightsout/lightsout4.png",
+            "portfolio/graphicdesign/lightsout/lightsout5.png",
+            "portfolio/graphicdesign/lightsout/lightsout6.png",
+            "portfolio/graphicdesign/lightsout/lightsout7.png",
+            "portfolio/graphicdesign/lightsout/lightsout8.png",
+            "portfolio/graphicdesign/lightsout/lightsout9.png",
+            "portfolio/graphicdesign/lightsout/lightsout10.png",
+            "portfolio/graphicdesign/lightsout/lightsout11.png",
+            "portfolio/graphicdesign/lightsout/lightsout12.png"
         ]
     },
     {
@@ -104,13 +115,13 @@
         "category": "editorial",
         "year": "2026",
         "role": "Layout and Editorial Design",
-        "thumbnail": "portfolio/editorial/ds4editorial1.jpg",
+        "thumbnail": "portfolio/editorial/gabeinterview/ds4editorials1.png",
         "description": "Gabed.exe is a specialized editorial design project centered around an exclusive interview with Gabriel Drozdov. The layout embraces experimental typography and fixed grid structures to mirror the technical themes discussed within the interview through a 1900's retro UI aesthetic, touching upon an era of pre-minimalist UI design prevailed. This piece successfully translates a digital-focused conversation into a striking physical print format.",
         "gallery": [
-            "portfolio/editorial/ds4editorial1.jpg",
-            "portfolio/editorial/ds4editorial2.jpg",
-            "portfolio/editorial/ds4editorial3.jpg",
-            "portfolio/editorial/ds4editorial4.jpg"
+            "portfolio/editorial/gabeinterview/ds4editorials1.png",
+            "portfolio/editorial/gabeinterview/ds4editorials2.png",
+            "portfolio/editorial/gabeinterview/ds4editorials3.png",
+            "portfolio/editorial/gabeinterview/ds4editorials4.png"
         ]
     },
     {
