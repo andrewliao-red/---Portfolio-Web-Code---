@@ -267,7 +267,7 @@
             "portfolio/web/worldswithin/wwtt-frost.png"
         ],
         "isFeatured": true,
-        "featuredDesc": "An experimental web experience exploring recursive digital environments and non-linear narrative structures."
+        "featuredDesc": "Enter the realms of the World Tree, interact with the people who call their realm 'home,' and browse through a collection of images."
     },
     {
         "id": "north-coast-music-festival",
@@ -297,6 +297,6 @@
         ],
         "video": "portfolio/videos/offline-worlds-trailer.mp4",
         "isFeatured": true,
-        "featuredDesc": "A brutalist exploration of disconnected digital states, utilizing raw typography and stark contrast."
+        "featuredDesc": "As 'A Museum for Dead Games,' Offline Worlds is an online archival campaign that preserves the history and identity of legendary video games and franchises that are no longer accessible to the consumer."
     }
 ]
