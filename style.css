@@ -345,7 +345,7 @@ main {
 
 .project-card:hover {
     border-color: var(--red);
-    box-shadow: 0 15px 35px rgba(255, 0, 8, 0.2), 0 0 20px rgba(235, 148, 35, 0.1);
+    box-shadow: 0 15px 35px rgba(255, 153, 0, 0.2), 0 0 20px rgba(235, 148, 35, 0.1);
 }
 
 .project-image {
@@ -359,7 +359,7 @@ main {
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--red);
+    background: var(--black);
 
     mix-blend-mode: color;
     opacity: 0.9;
@@ -382,7 +382,7 @@ main {
 }
 
 .project-card:hover img {
-    transform: scale(1.15) translateZ(20px);
+    transform: scale(1.25) translateZ(20px);
     filter: grayscale(0%);
 }
 
