@@ -1109,3 +1109,71 @@ main {
     box-shadow: 0 0 12px var(--red);
     transform: scale(1.4);
 }
+
+/* LOGO OF COMPANIES I HAVE / AM WORKING AT */
+
+.logo-marquee-wrap {
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    
+    /* --- NEW: DELAY FADE-IN PROPERTIES --- */
+    opacity: 0; 
+    animation: marqueeFadeIn 1s forwards cubic-bezier(0.25, 1, 0.5, 1);
+    animation-delay: 2.5s; /* Fits perfectly between the hero typing and grid loading */
+}
+
+.logo-marquee {
+    display: flex;
+}
+
+.marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 4rem; /* Spacing between logos */
+    animation: scrollLogos 30s linear infinite;
+}
+
+.marquee-track img {
+    height: 60px; /* Keep them small and uniform */
+    opacity: 0.4;
+    filter: grayscale(100%) contrast(200%);
+    transition: opacity 0.3s ease;
+}
+
+.marquee-track img:hover {
+    opacity: 1;
+}
+
+@keyframes scrollLogos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-10%); } /* Assuming the track is double width */
+}
+
+/* --- NEW: FADE-IN ANIMATION --- */
+@keyframes marqueeFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slight upward drift to match the rest of the site */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- DRAG & HIGHLIGHT PREVENTION --- */
+.project-card, 
+.featured-banner {
+    user-select: none; /* Prevents accidental blue highlighting when dragging */
+    -webkit-user-select: none;
+}
+
+.project-card img, 
+.featured-banner img {
+    -webkit-user-drag: none; /* Stops the native browser image 'ghost' drag */
+    user-drag: none;
+    pointer-events: none; /* Passes all mouse events cleanly to the parent card */
+}

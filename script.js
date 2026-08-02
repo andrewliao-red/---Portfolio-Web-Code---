@@ -150,7 +150,7 @@ function buildProjectGrid(projectsToRender, category) {
             const buildCards = (projs) => projs.map(project => `
                 <article class="project-card hover-target" data-id="${project.id}">
                     <div class="project-image">
-                        <img src="${project.thumbnail}" alt="${project.title} thumbnail">
+                        <img src="${project.thumbnail}" alt="${project.title} thumbnail" draggable="false">
                     </div>
                     <div class="project-info">
                         <h3>${project.title}</h3>
@@ -188,7 +188,7 @@ function buildProjectGrid(projectsToRender, category) {
                             <span class="view-case">VIEW CASE STUDY ↗</span>
                         </div>
                         <div class="featured-image">
-                            <img src="${featProj.thumbnail}" alt="${featProj.title}">
+                            <img src="${featProj.thumbnail}" alt="${featProj.title}" draggable="false">
                         </div>
                     </div>
                 </div>
