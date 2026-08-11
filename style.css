@@ -1122,7 +1122,7 @@ main {
     /* --- NEW: DELAY FADE-IN PROPERTIES --- */
     opacity: 0; 
     animation: marqueeFadeIn 1s forwards cubic-bezier(0.25, 1, 0.5, 1);
-    animation-delay: 2.5s; /* Fits perfectly between the hero typing and grid loading */
+    animation-delay: 3.5s; /* Fits perfectly between the hero typing and grid loading */
 }
 
 .logo-marquee {

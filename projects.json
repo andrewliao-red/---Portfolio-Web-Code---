@@ -14,6 +14,24 @@
             "portfolio/editorial/hopeandanchor/hna3.png"
         ]
     },
+
+    {
+        "id": "gardenremediesicons",
+        "title": "Garden Remedies Icons",
+        "category": "design",
+        "year": "2026",
+        "role": "Iconographic Iterations",
+        "thumbnail": "portfolio/graphicdesign/gardenremedies/gr-icon-comp-1.jpg",
+        "description": "This summer, during my internship at Santoro Design, LLC, I was tasked with creating the iconography for Garden Remedies — a studio client. This task gave me the opportunity to understand how design works from sketch to the final product as I was also required to come up with many iterations to understand the importance of the process. After over 300+ sketches, and narrowing them down to two directions and vectorizing them, the icons shown below are the finished results.",
+        "gallery": [
+            "portfolio/graphicdesign/gardenremedies/gr-icon-comp-1.jpg",
+            "portfolio/graphicdesign/gardenremedies/gr-icon-comp-2.jpg",
+            "portfolio/graphicdesign/gardenremedies/gr-icon-comp-3.jpg",
+            "portfolio/graphicdesign/gardenremedies/gr-icon-comp-4.jpg",
+            "portfolio/graphicdesign/gardenremedies/gr-icon-comp-5.jpg"
+        ]
+    },
+
     {
         "id": "collection-poster",
         "title": "Cyberpunk Poster Series",
