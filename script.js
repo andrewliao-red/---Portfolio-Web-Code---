@@ -94,11 +94,30 @@ buttons.forEach(button => {
         changeHeadline(category); 
         
         const grid = document.getElementById("project-grid");
+        const marquee = document.querySelector(".logo-marquee-wrap"); // <-- 1. Grab the marquee
+        
         grid.style.opacity = '0'; // Smooth fade out
+
+        // <-- 2. Fade out the marquee simultaneously
+        if (marquee) {
+            marquee.style.transition = 'opacity 0.4s ease'; 
+            marquee.style.opacity = '0'; 
+        }
         
         setTimeout(() => {
             buildProjectGrid(filteredProjects, category);
             grid.style.opacity = '1'; // Fade back in
+
+            // <-- 3. Toggle marquee display and quick fade-in
+            if (marquee) {
+                if (category === "all") {
+                    marquee.style.display = "block";
+                    marquee.style.animation = "none"; // Kills the initial 2.5s cinematic delay
+                    setTimeout(() => marquee.style.opacity = '1', 50); // Fast fade in
+                } else {
+                    marquee.style.display = "none"; // Hide completely on subpages
+                }
+            }
         }, 400);
         
         if(window.innerWidth < 1100) {
