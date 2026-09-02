@@ -1071,7 +1071,7 @@ main {
 }
 
 /* If the innerHTML is the replay icon, center it normally without the play-triangle padding */
-.vid-center-btn:has(:contains('↺')) {
+.vid-center-btn.is-replay {
     padding-left: 0;
 }
 
@@ -1176,4 +1176,92 @@ main {
     -webkit-user-drag: none; /* Stops the native browser image 'ghost' drag */
     user-drag: none;
     pointer-events: none; /* Passes all mouse events cleanly to the parent card */
+}
+
+/* =========================================================
+   PERFORMANCE / ACCESSIBILITY OPTIMIZATIONS
+   ========================================================= */
+
+/*
+   Video projects open in a full-screen overlay. While that overlay is active,
+   there is no benefit to spending GPU/CPU time on decorative motion underneath.
+*/
+body.video-performance-mode .ambient-gradient {
+    animation: none !important;
+    filter: none;
+}
+
+body.video-performance-mode .logo-marquee-wrap,
+body.video-performance-mode .marquee-track {
+    animation-play-state: paused !important;
+}
+
+body.video-performance-mode #particle-container,
+body.video-performance-mode .cursor-particle {
+    display: none !important;
+}
+
+body.video-performance-mode .custom-cursor {
+    mix-blend-mode: normal;
+    box-shadow: none;
+}
+
+body.video-performance-mode .row-track {
+    will-change: auto;
+}
+
+/*
+   Respect the user's reduced-motion preference. This also provides a lighter
+   rendering path for older / lower-power hardware when that preference is on.
+*/
+@media (prefers-reduced-motion: reduce) {
+    body {
+        cursor: auto !important;
+    }
+
+    .custom-cursor,
+    #particle-container {
+        display: none !important;
+    }
+
+    .ambient-gradient,
+    .logo-marquee-wrap,
+    .marquee-track,
+    .hero-divider,
+    .timeline-item,
+    .intro-fade-row,
+    .fade-in-up {
+        animation: none !important;
+    }
+
+    .logo-marquee-wrap,
+    .timeline-item,
+    .intro-fade-row,
+    .fade-in-up {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .hero-divider {
+        opacity: 1 !important;
+        transform: scaleX(1) !important;
+    }
+
+    .row-track {
+        transform: none !important;
+        will-change: auto;
+    }
+
+    .project-card,
+    .featured-banner,
+    .project-image img,
+    .timeline-content,
+    .nav-btn,
+    .nav-toggle,
+    .back-action,
+    .video-wrapper,
+    .vid-btn,
+    .vid-center-btn {
+        transition: none !important;
+    }
 }

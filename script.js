@@ -1,6 +1,9 @@
 let projects = [];
-window.rowAnimators = []; // Global reference to cancel animation frames
+window.rowAnimators = []; // One active requestAnimationFrame ID per row
 window.isDraggingRow = false; // Flag to stop accidental clicks while dragging
+
+// Respect the user's OS/browser reduced-motion preference in both CSS and JavaScript.
+const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 // Initialize
 async function loadProjects() {
@@ -22,15 +25,32 @@ let mouseX = window.innerWidth / 2;
 let mouseY = window.innerHeight / 2;
 let cursorX = mouseX;
 let cursorY = mouseY;
-let isHovering = false;
+let cursorAnimationFrame = null;
+
+if (cursor) {
+    cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
+}
+
+function shouldAnimateCustomCursor() {
+    return Boolean(cursor) && window.innerWidth > 1100 && !reduceMotionQuery.matches;
+}
 
 document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
+
+    // Start the smoothing loop only when the pointer actually moves. The old
+    // implementation ran requestAnimationFrame forever, even while idle.
+    if (cursorAnimationFrame === null && shouldAnimateCustomCursor()) {
+        cursorAnimationFrame = requestAnimationFrame(animateCursor);
+    }
 });
 
 function spawnParticle(x, y) {
-    if (Math.random() > 0.6) return; 
+    // Decorative particles are intentionally disabled while a video project is open
+    // and for users who prefer reduced motion.
+    if (!particleContainer || reduceMotionQuery.matches || document.body.classList.contains('video-performance-mode')) return;
+    if (Math.random() > 0.6) return;
 
     const particle = document.createElement('div');
     particle.className = 'cursor-particle';
@@ -55,23 +75,44 @@ function spawnParticle(x, y) {
 }
 
 function animateCursor() {
-    cursorX += (mouseX - cursorX) * 0.2; 
+    if (!shouldAnimateCustomCursor()) {
+        cursorAnimationFrame = null;
+        return;
+    }
+
+    cursorX += (mouseX - cursorX) * 0.2;
     cursorY += (mouseY - cursorY) * 0.2;
-    
+
     cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
-    
-    if (Math.abs(mouseX - cursorX) > 1 || Math.abs(mouseY - cursorY) > 1) {
+
+    const distanceX = Math.abs(mouseX - cursorX);
+    const distanceY = Math.abs(mouseY - cursorY);
+
+    if (distanceX > 1 || distanceY > 1) {
         spawnParticle(cursorX, cursorY);
     }
 
-    requestAnimationFrame(animateCursor);
+    if (distanceX > 0.1 || distanceY > 0.1) {
+        cursorAnimationFrame = requestAnimationFrame(animateCursor);
+    } else {
+        cursorX = mouseX;
+        cursorY = mouseY;
+        cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
+        cursorAnimationFrame = null;
+    }
 }
-requestAnimationFrame(animateCursor);
 
 function initCursorHoverEffects() {
+    if (!cursor) return;
+
     const hoverTargets = document.querySelectorAll('.hover-target, .project-card, a');
-    
+
     hoverTargets.forEach(target => {
+        // This function runs after dynamic grid/project HTML is injected. Mark each
+        // element once so static controls do not accumulate duplicate listeners.
+        if (target.dataset.cursorHoverBound === 'true') return;
+        target.dataset.cursorHoverBound = 'true';
+
         target.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
         target.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
     });
@@ -146,11 +187,8 @@ if (navToggle && sidebar) {
 function buildProjectGrid(projectsToRender, category) {
     const grid = document.getElementById("project-grid");
     
-    // 1. Clear any running animation loops from the "ALL" view
-    if (window.rowAnimators) {
-        window.rowAnimators.forEach(req => cancelAnimationFrame(req));
-        window.rowAnimators = [];
-    }
+    // Clear any running animation loops before rebuilding the grid.
+    stopRowAnimations();
 
     if (category === "all") {
         grid.className = "project-grid is-rows";
@@ -249,89 +287,193 @@ function buildProjectGrid(projectsToRender, category) {
 }
 
 /* --- INFINITE LOOP & DRAGGING LOGIC (For ALL View) --- */
+function stopRowAnimations() {
+    const containers = document.querySelectorAll('.row-container');
+
+    containers.forEach(container => {
+        const state = container._rowAnimationState;
+        if (!state) return;
+
+        state.running = false;
+
+        if (state.frameId !== null) {
+            cancelAnimationFrame(state.frameId);
+            state.frameId = null;
+        }
+    });
+
+    window.rowAnimators = [];
+}
+
+function startRowAnimation(container, index) {
+    const state = container._rowAnimationState;
+    if (!state || state.running || reduceMotionQuery.matches) return;
+
+    state.running = true;
+
+    const animateRow = () => {
+        if (!state.running) return;
+
+        if (!state.isHovered && !state.isMouseDown) {
+            state.currentOffset += state.speed * state.direction;
+        }
+
+        const setWidth = state.setWidth;
+
+        if (setWidth > 0) {
+            if (state.currentOffset >= setWidth) {
+                state.currentOffset -= setWidth;
+            } else if (state.currentOffset <= 0) {
+                state.currentOffset += setWidth;
+            }
+        }
+
+        // translate3d keeps this movement on the compositor on most browsers.
+        state.track.style.transform = `translate3d(${-state.currentOffset}px, 0, 0)`;
+
+        state.frameId = requestAnimationFrame(animateRow);
+        window.rowAnimators[index] = state.frameId;
+    };
+
+    state.animate = animateRow;
+    animateRow();
+}
+
 function initRowAnimationsAndDrag() {
     const containers = document.querySelectorAll('.row-container');
-    
+
+    // Only retain one active frame request per row. This prevents the previous
+    // rowAnimators array from growing by ~60 entries per second per row.
+    stopRowAnimations();
+
     containers.forEach((container, index) => {
         const track = container.querySelector('.row-track');
         const singleSet = container.querySelector('.row-set');
-        
-        let isHovered = false;
-        let isMouseDown = false;
-        let startX = 0;
-        let currentOffset = 0;
-        let dragDistance = 0;
-        
-        // Alternating directions: row 0 right, row 1 left, row 2 right, etc.
-        // direction: 1 means elements move left, -1 means elements move right
-        const direction = index % 2 === 0 ? -1 : 1; 
-        const speed = 0.5; // Adjust auto-scroll speed here
-        
-        // Initial offset to prevent blank spaces when moving right
-        if (direction === -1) {
-            currentOffset = singleSet.offsetWidth;
-        }
+        if (!track || !singleSet) return;
 
-        // The animation loop
-        function animateRow() {
-            if (!isHovered && !isMouseDown) {
-                currentOffset += speed * direction;
-            }
+        const direction = index % 2 === 0 ? -1 : 1;
+        const initialOffset = direction === -1 ? singleSet.offsetWidth : 0;
 
-            const setWidth = singleSet.offsetWidth;
+        const state = {
+            track,
+            singleSet,
+            isHovered: false,
+            isMouseDown: false,
+            startX: 0,
+            currentOffset: initialOffset,
+            dragDistance: 0,
+            direction,
+            speed: 0.5,
+            setWidth: singleSet.offsetWidth,
+            frameId: null,
+            running: false,
+            animate: null
+        };
 
-            // Infinite loop wrapping logic
-            if (currentOffset >= setWidth) {
-                currentOffset -= setWidth;
-            } else if (currentOffset <= 0) {
-                currentOffset += setWidth;
-            }
+        // Store state directly on the DOM element so the same listeners/state
+        // can be resumed after a project overlay closes without being duplicated.
+        container._rowAnimationState = state;
 
-            track.style.transform = `translateX(${-currentOffset}px)`;
-            
-            const req = requestAnimationFrame(animateRow);
-            window.rowAnimators.push(req);
-        }
-        
-        animateRow();
+        container.addEventListener('mouseenter', () => {
+            state.isHovered = true;
+        });
 
-        // Mouse Events
-        container.addEventListener('mouseenter', () => isHovered = true);
         container.addEventListener('mouseleave', () => {
-            isHovered = false;
-            isMouseDown = false;
+            state.isHovered = false;
+            state.isMouseDown = false;
         });
 
         container.addEventListener('mousedown', (e) => {
-            isMouseDown = true;
-            startX = e.clientX;
-            dragDistance = 0;
+            state.isMouseDown = true;
+            state.startX = e.clientX;
+            state.dragDistance = 0;
             window.isDraggingRow = false;
         });
 
         container.addEventListener('mousemove', (e) => {
-            if (!isMouseDown) return;
-            const dx = e.clientX - startX;
-            dragDistance += Math.abs(dx);
-            
-            // If mouse moves more than 5px while down, it's a drag, not a click
-            if (dragDistance > 5) {
+            if (!state.isMouseDown) return;
+
+            const dx = e.clientX - state.startX;
+            state.dragDistance += Math.abs(dx);
+
+            if (state.dragDistance > 5) {
                 window.isDraggingRow = true;
             }
-            
-            currentOffset -= dx; // Apply drag to offset
-            startX = e.clientX;
+
+            state.currentOffset -= dx;
+            state.startX = e.clientX;
         });
 
         container.addEventListener('mouseup', () => {
-            isMouseDown = false;
-            // Short delay to prevent the 'click' event on cards from opening if we dragged
+            state.isMouseDown = false;
+
             setTimeout(() => {
                 window.isDraggingRow = false;
             }, 50);
         });
+
+        startRowAnimation(container, index);
     });
 }
+
+function resumeRowAnimations() {
+    const grid = document.getElementById('project-grid');
+    if (!grid || !grid.classList.contains('is-rows') || reduceMotionQuery.matches) return;
+
+    const containers = document.querySelectorAll('.row-container');
+
+    containers.forEach((container, index) => {
+        // If the grid was rebuilt, initialize it normally. Otherwise resume the
+        // existing state without adding a second copy of every event listener.
+        if (!container._rowAnimationState) {
+            initRowAnimationsAndDrag();
+            return;
+        }
+
+        startRowAnimation(container, index);
+    });
+}
+
+// Save CPU/GPU work when the tab is hidden and resume only when the homepage
+// rows are actually visible again.
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        stopRowAnimations();
+    } else if (!document.querySelector('.overlay-view.active')) {
+        resumeRowAnimations();
+    }
+});
+
+function handleReducedMotionChange(event) {
+    if (event.matches) {
+        stopRowAnimations();
+    } else if (!document.querySelector('.overlay-view.active')) {
+        resumeRowAnimations();
+    }
+}
+
+if (typeof reduceMotionQuery.addEventListener === 'function') {
+    reduceMotionQuery.addEventListener('change', handleReducedMotionChange);
+} else if (typeof reduceMotionQuery.addListener === 'function') {
+    // Legacy Safari fallback.
+    reduceMotionQuery.addListener(handleReducedMotionChange);
+}
+
+let rowResizeFrame = null;
+window.addEventListener('resize', () => {
+    if (rowResizeFrame !== null) return;
+
+    rowResizeFrame = requestAnimationFrame(() => {
+        document.querySelectorAll('.row-container').forEach(container => {
+            const state = container._rowAnimationState;
+            if (state) {
+                state.setWidth = state.singleSet.offsetWidth;
+            }
+        });
+
+        rowResizeFrame = null;
+    });
+});
 
 /* --- CARD ACTIVATION (With Drag Prevention) --- */
 function activateCards() {
@@ -397,6 +539,10 @@ function openProject(id) {
     const project = projects.find(p => String(p.id) === String(id));
     if (!project) return;
 
+    // The project view is an overlay, so stop the animated homepage underneath it.
+    stopRowAnimations();
+    disableVideoPerformanceMode();
+
     // 1. Reset any running slideshows before opening a new project
     clearInterval(slideInterval);
     currentSlide = 0;
@@ -410,7 +556,7 @@ function openProject(id) {
         const projectUrl = project.link || "#"; 
         webLinkHTML = `
             <div style="margin-top: 1.5rem;">
-                <a href="${projectUrl}" target="_blank" class="web-capsule hover-target">
+                <a href="${projectUrl}" target="_blank" rel="noopener noreferrer" class="web-capsule hover-target">
                     VISIT WEBSITE ↗
                 </a>
             </div>
@@ -461,7 +607,15 @@ function openProject(id) {
                 <div class="video-wrapper" style="position: relative;">
                     <div id="vid-center-play" class="vid-center-btn hover-target">▶</div>
                     
-                    <video id="custom-video" src="${project.video}" preload="metadata"></video>
+                    <video
+                        id="custom-video"
+                        src="${project.video}"
+                        poster="${project.thumbnail}"
+                        preload="metadata"
+                        playsinline
+                        webkit-playsinline
+                        disablepictureinpicture
+                    ></video>
                     
                     <div class="vid-timeline-container">
                         <input type="range" id="vid-progress-slider" class="vid-slider vid-progress hover-target" min="0" max="100" step="0.1" value="0">
@@ -502,18 +656,15 @@ function openProject(id) {
         </div>
     `;
 
-    // 6. Start the 2-second interval if there are multiple images
+    // Start the slideshow interval if there are multiple images.
     if (project.gallery.length > 1) {
         startSlideShow();
     }
 
-    // 6. Start the 2-second interval if there are multiple images
-    if (project.gallery.length > 1) {
-        startSlideShow();
-    }
-
-    // Initialize custom video player if it exists
+    // Initialize the custom player and strip away expensive background effects
+    // while the video case study is open.
     if (project.video) {
+        enableVideoPerformanceMode();
         initVideoPlayer();
     }
 
@@ -628,12 +779,41 @@ function closeOverlay(overlayId) {
     }, 700);
 }
 
+function enableVideoPerformanceMode() {
+    document.body.classList.add('video-performance-mode');
+}
+
+function disableVideoPerformanceMode() {
+    document.body.classList.remove('video-performance-mode');
+}
+
+function releaseProjectVideo() {
+    const video = document.getElementById('custom-video');
+    if (!video) return;
+
+    video.pause();
+    video.removeAttribute('src');
+    video.load();
+}
+
+function closeProjectView() {
+    clearInterval(slideInterval);
+    releaseProjectVideo();
+    disableVideoPerformanceMode();
+    closeOverlay('project-view');
+
+    // Wait for the overlay transition to finish before restarting visible rows.
+    setTimeout(() => {
+        resumeRowAnimations();
+    }, 700);
+}
+
 document.getElementById("aboutBtn")?.addEventListener("click", () => {
     openOverlay("about-view");
     if(window.innerWidth < 1100) document.getElementById("sidebar").classList.remove("open");
 });
 
-document.getElementById("back-btn")?.addEventListener("click", () => closeOverlay("project-view"));
+document.getElementById("back-btn")?.addEventListener("click", closeProjectView);
 document.getElementById("about-back-btn")?.addEventListener("click", () => closeOverlay("about-view"));
 
 /* --- TYPEWRITER HEADER LOGIC --- */
@@ -737,20 +917,33 @@ function initVideoPlayer() {
     // Play & Pause Logic
     const togglePlay = () => {
         if (video.paused) {
-            video.play();
-            playBtn.innerText = 'PAUSE';
-            playBtn.classList.add('active');
-            
-            // Hide center button while playing
-            centerPlayBtn.style.opacity = '0';
-            centerPlayBtn.style.pointerEvents = 'none';
+            const updatePlayingUI = () => {
+                playBtn.innerText = 'PAUSE';
+                playBtn.classList.add('active');
+                centerPlayBtn.classList.remove('is-replay');
+                centerPlayBtn.style.opacity = '0';
+                centerPlayBtn.style.pointerEvents = 'none';
+            };
+
+            const playPromise = video.play();
+
+            if (playPromise && typeof playPromise.then === 'function') {
+                playPromise
+                    .then(updatePlayingUI)
+                    .catch((error) => {
+                        console.warn('Video playback could not start:', error);
+                    });
+            } else {
+                // Older browsers may return undefined from HTMLMediaElement.play().
+                updatePlayingUI();
+            }
         } else {
             video.pause();
             playBtn.innerText = 'PLAY';
             playBtn.classList.remove('active');
-            
-            // Show center button as 'Paused' state
-            centerPlayBtn.innerHTML = '▶'; 
+
+            centerPlayBtn.innerHTML = '▶';
+            centerPlayBtn.classList.remove('is-replay');
             centerPlayBtn.style.opacity = '1';
             centerPlayBtn.style.pointerEvents = 'auto';
         }
@@ -820,6 +1013,7 @@ function initVideoPlayer() {
         
         // Turn center button into a Replay icon
         centerPlayBtn.innerHTML = '↺';
+        centerPlayBtn.classList.add('is-replay');
         centerPlayBtn.style.opacity = '1';
         centerPlayBtn.style.pointerEvents = 'auto';
     });
