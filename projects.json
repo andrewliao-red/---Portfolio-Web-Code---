@@ -316,5 +316,39 @@
         "video": "portfolio/videos/offline-worlds-trailer.mp4",
         "isFeatured": true,
         "featuredDesc": "As 'A Museum for Dead Games,' Offline Worlds is an online archival campaign that preserves the history and identity of legendary video games and franchises that are no longer accessible to the consumer."
+    },
+
+    {
+        "id": "self-portrait-painting",
+        "title": "Self Portrait",
+        "category": "experiments",
+        "year": "2022",
+        "role": "Painting",
+        "thumbnail": "portfolio/experiments/self-portrait.webp",
+        "description": "A self-portrait painting created during my pre-RISD portfolio development, exploring observation, color, proportion, and expressive mark-making.",
+        "gallery": [
+            "portfolio/experiments/self-portrait.webp"
+        ]
+    },
+
+    {
+        "id": "charcoal-drawing",
+        "title": "Charcoal Drawings",
+        "category": "experiments",
+        "year": "2023",
+        "role": "Contains artistic nudity / figure drawing",
+        "thumbnail": "portfolio/experiments/fg1.jpg",
+        "description": "A series of charcoal figure studies exploring gesture, proportion, anatomy, light, and form through direct observation.",
+        "gallery": [
+            "portfolio/experiments/fg1.jpg",
+            "portfolio/experiments/fg2.jpg",
+            "portfolio/experiments/fg3.jpg",
+            "portfolio/experiments/fg4.jpg",
+            "portfolio/experiments/fg5.jpg",
+            "portfolio/experiments/fg6.jpg",
+            "portfolio/experiments/fg7.jpg",
+            "portfolio/experiments/fg8.jpg",
+            "portfolio/experiments/fg9.jpg"
+        ]
     }
 ]
