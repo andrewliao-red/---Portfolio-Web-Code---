@@ -68,7 +68,7 @@
         "year": "2024",
         "role": "Typographic Research",
         "thumbnail": "portfolio/graphicdesign/typographicsymphonyposter/typosymphony.png",
-        "description": "Typographic Symphony is a visually-striking poster design rooted in deep research regarding the historical evolution of typography. By researching based off of Emmett McBain's typographic album cover designs, we are able to see how typography shares evolution in different forms and materials.",
+        "description": "Typographic Symphony is a research-based poster design rooted in deep exploration regarding the historical evolution of typography. By researching based off of Emmett McBain's typographic album cover designs, we are able to see how typography shares evolution in different forms and materials.",
         "gallery": [
             "portfolio/graphicdesign/typographicsymphonyposter/typosymphony.png"
         ]
@@ -291,9 +291,10 @@
         "id": "north-coast-music-festival",
         "title": "North Coast Music Festival",
         "category": "web",
-        "year": "2025",
+        "year": "2025 — 2026",
         "role": "UI/UX Brand Design",
         "thumbnail": "portfolio/graphicdesign/musicfestival/ncmf6.png",
+        "link": "https://andrewliao-red.github.io/North-Coast-Music-Festival/",
         "description": "A UI/UX brand design re-design concept for the North Coast Music Festival, capturing the event's vibrant energy through engaging and accessible web interfaces.",
         "gallery": [
             "portfolio/graphicdesign/musicfestival/ncmf6.png"
@@ -325,7 +326,7 @@
         "year": "2022",
         "role": "Painting",
         "thumbnail": "portfolio/experiments/self-portrait.webp",
-        "description": "A self-portrait painting created during my pre-RISD portfolio development, exploring observation, color, proportion, and expressive mark-making.",
+        "description": "A self-portrait painting created during my pre-RISD portfolio development, exploring observation, color, proportion, and expressive mark-making. The self-portrait was created with oil paints.",
         "gallery": [
             "portfolio/experiments/self-portrait.webp"
         ]
@@ -338,7 +339,7 @@
         "year": "2023",
         "role": "Contains artistic nudity / figure drawing",
         "thumbnail": "portfolio/experiments/fg1.jpg",
-        "description": "A series of charcoal figure studies exploring gesture, proportion, anatomy, light, and form through direct observation.",
+        "description": "A series of charcoal figure studies exploring gesture, proportion, anatomy, light, and form through direct observation. Drawn with charcoal pencils.",
         "gallery": [
             "portfolio/experiments/fg1.jpg",
             "portfolio/experiments/fg3.jpg",
